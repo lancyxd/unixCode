@@ -1,0 +1,65 @@
+src.3e.tar.gz :unix高级编程代码
+
+/root/unixcode      93机器（内网机器）
+
+下载src.3e.tar.gz
+http://apuebook.com/code3e.html
+
+
+
+
+yum install libbsd-devel
+yum install libbsd-0.6.0-1.el6.x86_64.rpm
+wget http://elrepo.reloumirrors.net/testing/el6/x86_64/RPMS/libbsd-0.2.0-4.el6.elrepo.x86_64.rpm(外网环境才可以下载)
+http://elrepo.reloumirrors.net/testing/el6/x86_64/RPMS/libbsd-0.2.0-4.el6.elrepo.x86_64.rpm(直接浏览器下载，传到93机器)
+rpm -ivh libbsd-0.2.0-4.el6.elrepo.x86_64.rpm 
+
+
+   cd apue.3e
+   make
+   用root用户或者sudo执行以下命令：
+   cp ./include/apue.h /usr/include/         
+   cp ./lib/libapue.a /usr/local/lib/ 
+   cp ./lib/libapue.a /usr/lib/
+   下载 apueerror.h
+    cp apueerror.h  /usr/include/
+
+
+在要编译运行的代码中#include<apue.h>的下一行增加一行：#include<apueerror.h>  
+
+接下来，执行gcc编译命令就可以正确的运行书上所有的实例代码啦，千万别忘记啦在有引用到err_相关的方法的实例代码的头部引入apueerror.h头文件。
+
+
+
+
+grep -rl "opendir" ./      -r ：递归查找子目录;   -l ：只显示文件名;   ./ ：当前目录路径
+grep -rl "opendir"  *.c
+
+
+
+
+第1章  intro
+
+df /home 查看空闲空间
+ln -sf testdir 创建软链接
+unlink testdir 解除链接
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+real    0m4.309s   时钟时间
+user    0m0.000s   用户cpu时间
+sys     0m0.001s   系统cpu时间
+
