@@ -1,5 +1,5 @@
 #include "apue.h"
-
+#include <apueerror.h>
 static void charatatime(char *);
 
 int

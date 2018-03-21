@@ -1,5 +1,5 @@
 #include "apue.h"
-
+#include <apueerror.h>
 static void	sig_int(int);
 
 int

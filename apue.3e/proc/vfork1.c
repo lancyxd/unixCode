@@ -1,5 +1,5 @@
 #include "apue.h"
-
+#include <apueerror.h>
 int		globvar = 6;		/* external variable in initialized data */
 
 int
@@ -15,11 +15,12 @@ main(void)
 	} else if (pid == 0) {		/* child */
 		globvar++;				/* modify parent's variables */
 		var++;
-		_exit(0);				/* child terminates */
+                exit(0);
+		//_exit(0);				/* child terminates */
 	}
 
 	/* parent continues here */
 	printf("pid = %ld, glob = %d, var = %d\n", (long)getpid(), globvar,
 	  var);
-	exit(0);
+        exit(0);
 }

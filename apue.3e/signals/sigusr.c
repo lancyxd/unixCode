@@ -1,5 +1,5 @@
 #include "apue.h"
-
+#include <apueerror.h>
 static void	sig_usr(int);	/* one handler for both signals */
 
 int

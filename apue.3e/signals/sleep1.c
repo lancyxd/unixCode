@@ -1,5 +1,6 @@
 #include	<signal.h>
 #include	<unistd.h>
+#include        <apueerror.h>
 
 static void
 sig_alrm(int signo)

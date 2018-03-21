@@ -1,9 +1,11 @@
 #include "apue.h"
-
+#include <apueerror.h>
+#include <stdio.h>
 int
 main(void)
 {
 	char	buf[MAXLINE];
+        printf("%d\n",MAXLINE);
 
 	while (fgets(buf, MAXLINE, stdin) != NULL)
 		if (fputs(buf, stdout) == EOF)
