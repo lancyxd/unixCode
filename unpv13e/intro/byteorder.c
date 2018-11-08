@@ -1,4 +1,5 @@
 #include	"unp.h"
+#include <stdio.h>
 
 int
 main(int argc, char **argv)
@@ -13,8 +14,10 @@ main(int argc, char **argv)
 	if (sizeof(short) == 2) {
 		if (un.c[0] == 1 && un.c[1] == 2)
 			printf("big-endian\n");
-		else if (un.c[0] == 2 && un.c[1] == 1)
+		else if (un.c[0] == 2 && un.c[1] == 1) {
+			printf("%o,%o\n", &un.c[0], &un.c[1]); // 32701160360(0x02),32701160361(0x01)
 			printf("little-endian\n");
+		}
 		else
 			printf("unknown\n");
 	} else

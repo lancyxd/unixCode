@@ -1,5 +1,6 @@
 #include "apue.h"
 #include <fcntl.h>
+#include<apueerror.h>
 
 int
 main(int argc, char *argv[])
